@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+work/
+runs/
+data/sltealeaf_v5/
+data/field_images/
+*.keras
+*.tflite
+*.ipynb_checkpoints

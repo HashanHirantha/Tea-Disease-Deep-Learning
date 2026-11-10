@@ -1,0 +1,6 @@
+# Python 3.11 or 3.12
+tensorflow==2.19.1
+keras==3.11.3
+numpy==1.26.4
+scipy==1.17.0
+Pillow==13.0.0

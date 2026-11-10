@@ -1,0 +1,8 @@
+﻿class_folder,class_label,standardized_original_images,generated_augmented_variants,expanded_set_total,field_original_images,controlled_environment_original_images,uncertain_original_images
+Algal_leaf_spot,Algal leaf spot,417,823,1240,331,86,0
+Black_blight,Black blight,345,621,966,236,109,0
+Blister_blight,Blister blight,126,631,757,60,66,0
+Gray_blight,Gray blight,431,814,1245,231,200,0
+Spider_mites,Spider mites,138,650,788,72,66,0
+Healthy,Healthy,334,638,972,221,113,0
+TOTAL,Total,1791,4177,5968,1151,640,0
