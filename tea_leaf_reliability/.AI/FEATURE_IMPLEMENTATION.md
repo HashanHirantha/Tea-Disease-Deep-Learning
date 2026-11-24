@@ -325,3 +325,24 @@
 **Key code:**
 - [Dockerfile](file:///e:/Tea-Disease-Deep-Learning/tea_leaf_reliability/Dockerfile)
 - [.dockerignore](file:///e:/Tea-Disease-Deep-Learning/tea_leaf_reliability/.dockerignore)
+
+---
+
+## 12. Full-Stack Diagnostic Web Application
+
+**What it does:** Provides a live, interactive web application pairing a **FastAPI** Python backend with a **Vite + React** frontend for real-time tea leaf disease diagnosis.
+
+**How it works:**
+- **Backend (`web/backend/main.py`):**
+  - REST endpoints for health check (`/api/health`), run discovery (`/api/runs`), execution conditions (`/api/conditions`), and inference (`/api/predict`).
+  - Supports automatic synthetic demo model bootstrapping (`/api/setup-demo-model`).
+  - Integrates Tea Research Institute of Sri Lanka (TRI) botanical and disease knowledge base (symptoms, fungal vectors, and agronomic management protocols).
+- **Frontend (`web/frontend/`):**
+  - Built with Vite, React 18, Tailwind CSS, and Lucide icons.
+  - Drag-and-drop leaf image upload with live preview.
+  - Interactive condition selector (INT8 Calibrated, INT8 Raw, FP32 Calibrated, FP32 Raw).
+  - Diagnostic card showing top classification, confidence gauge, selective referral alert banner, and softmax probability distribution.
+  - TRI management guidelines card (symptoms, environmental causes, chemical and cultural control).
+- **Unified Launcher (`web/run_web.py`):**
+  - Starts both the FastAPI Uvicorn server and Vite development server in one command and opens the browser.
+

@@ -55,10 +55,9 @@
 - **Why:** Enables deployment on non-mobile edge devices (Raspberry Pi, Jetson) via ONNX Runtime.
 - **Effort:** Medium — `tf2onnx` conversion + validation against TFLite outputs.
 
-### 9. Web-Based Prediction Interface
-- **What:** A lightweight Flask/FastAPI server that accepts an uploaded leaf image and returns the prediction JSON.
-- **Why:** Enables quick demos and remote access without CLI knowledge.
-- **Effort:** Medium — wrap `predict_one()` in a REST endpoint, add a minimal HTML upload form.
+### 9. Web-Based Prediction Interface (✅ Completed)
+- **Status:** Implemented in `web/` using **FastAPI** + **Vite React** with full INT8/FP32 condition switching, TRI Sri Lanka disease management guidelines, and selective referral alerts.
+- **Related:** [web/](file:///e:/Tea-Disease-Deep-Learning/tea_leaf_reliability/web/README.md)
 
 ---
 

@@ -1,10 +1,34 @@
+# Python artifacts
 __pycache__/
 *.py[cod]
 .venv/
+venv/
+
+# Experiments & runtime data
 work/
 runs/
-data/sltealeaf_v5/
-data/field_images/
+*.tmp
+
+# Model checkpoints & weights
 *.keras
 *.tflite
-*.ipynb_checkpoints
+*.h5
+
+# Large dataset folders
+data/sltealeaf_v5/
+data/field_images/
+*.zip
+*.tar.gz
+
+# Frontend dependencies and production build
+web/frontend/node_modules/
+web/frontend/dist/
+node_modules/
+dist/
+
+# Notebooks & IDEs
+*.ipynb_checkpoints/
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

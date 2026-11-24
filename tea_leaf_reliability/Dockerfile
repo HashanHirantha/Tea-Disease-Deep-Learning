@@ -53,26 +53,30 @@ WORKDIR /app
 
 # Copy only requirements first to cache the pip layer
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
+COPY web/backend/requirements.txt ./web_requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt -r web_requirements.txt
 
 # ---------- application ----------
 FROM deps AS app
 
-# Copy the full project source
+# Copy the full project source (including built frontend in web/frontend/dist)
 COPY . .
 
 # Persist outputs in named volumes or bind mounts
 VOLUME ["/app/work", "/app/runs"]
 
+# Expose port for the FastAPI + Vite Web Dashboard
+EXPOSE 8000
+
 # Default working directory
 WORKDIR /app
 
-# Health-check: make sure the CLI loads
+# Health-check: make sure the CLI or web server loads
 HEALTHCHECK --interval=60s --timeout=10s --start-period=5s --retries=2 \
     CMD python -m tea_research --help > /dev/null 2>&1 || exit 1
 
 # Default entrypoint: run the tea_research CLI
 ENTRYPOINT ["python", "-m", "tea_research"]
 
-# Default command: show help when no arguments are given
+# Default command: show help when no arguments are given (override with web/backend/main.py for web UI)
 CMD ["--help"]
