@@ -1,0 +1,32 @@
+# Build context excludes — keep the image small
+__pycache__/
+*.py[cod]
+*.pyo
+.venv/
+.git/
+.gitignore
+
+# Large runtime artifacts (mount these instead)
+work/
+runs/
+data/sltealeaf_v5/
+data/field_images/
+
+# Model checkpoints & exports (produced at runtime)
+*.keras
+*.tflite
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Notebook checkpoints
+*.ipynb_checkpoints/
+.ipynb_checkpoints/
+
+# Docker itself
+Dockerfile
+docker-compose*.yml
+.dockerignore
