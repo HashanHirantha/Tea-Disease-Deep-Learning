@@ -3,8 +3,14 @@ __pycache__/
 *.py[cod]
 *.pyo
 .venv/
+venv/
 .git/
 .gitignore
+
+# Never copy host node_modules into Docker context
+node_modules/
+web/frontend/node_modules/
+npm-debug.log*
 
 # Large runtime artifacts (mount these instead)
 work/
